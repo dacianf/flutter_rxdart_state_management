@@ -34,6 +34,7 @@ migrate_working_dir/
 *.g.dart
 *.chopper.dart
 *.freezed.dart
+*.mocks.dart
 
 # Web related
 lib/generated_plugin_registrant.dart

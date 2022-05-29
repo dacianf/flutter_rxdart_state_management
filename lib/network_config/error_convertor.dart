@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:rxdart_state_management_article/network_config/api_error.dart';
 
@@ -14,11 +16,25 @@ class ErrorConverter extends InterceptorsWrapper {
     };
     errorBody["statusCode"] = err.response?.statusCode;
     var error = err.response?.data;
-    if (error is Map<String, dynamic>) {
-      errorBody["message"] = error["error"];
-    } else if (error is List && error.first is Map<String, dynamic>) {
-      errorBody.addAll(error.first);
+    Map<String, dynamic> errorResponse = {};
+    if (error is String) {
+      try {
+        errorResponse = (jsonDecode(error) as Map<String, dynamic>);
+      } on Exception catch (err, _) {
+        errorResponse = {
+          "error": (error.isNotEmpty) ? error : errorBody["messsage"],
+        };
+      }
+    } else if (error is Map<String, dynamic>) {
+      errorResponse = error;
     }
+
+    errorBody["message"] =
+        errorResponse["errorMessage"] ?? errorBody["message"];
+    if (errorResponse["errors"] is Map<String, dynamic>) {
+      errorBody["errors"] = errorResponse["errors"];
+    }
+
     var apiError = ApiError.fromJson(errorBody);
     handler.next(err..error = apiError);
   }

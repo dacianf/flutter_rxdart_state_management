@@ -1,5 +1,5 @@
-import 'package:dio/dio.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:rxdart_state_management_article/network_config/api_error.dart';
 import 'package:rxdart_state_management_article/network_config/app_result.dart';
 
 extension FutureExtension<T> on Future<T> {
@@ -8,26 +8,26 @@ extension FutureExtension<T> on Future<T> {
       return AppResult.data(value);
     })
         .onError((error, stackTrace) {
-          if (error is DioError) {
-            return AppResult.apiError(error.error);
+          if (error is ApiError) {
+            return AppResult<T>.apiError(error);
           }
-          return AppResult.appError(error.toString());
+          return AppResult<T>.appError(error.toString());
         })
         .asStream()
-        .startWith(const AppResult.loading());
+        .startWith(AppResult<T>.loading());
   }
 
   Stream<AppResult<E>> safeApiConvert<E>(E Function(T) transform) {
     return then((value) {
-      return AppResult.data(transform(value));
+      return AppResult<E>.data(transform(value));
     })
         .onError((error, stackTrace) {
-          if (error is DioError) {
-            return AppResult.apiError(error.error);
+          if (error is ApiError) {
+            return AppResult<E>.apiError(error);
           }
-          return AppResult.appError(error.toString());
+          return AppResult<E>.appError(error.toString());
         })
         .asStream()
-        .startWith(const AppResult.loading());
+        .startWith(AppResult<E>.loading());
   }
 }

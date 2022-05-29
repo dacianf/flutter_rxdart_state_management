@@ -3,7 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:rxdart_state_management_article/features/universities_feed/domain/entity/university.dart';
 
 part 'api_university_model.freezed.dart';
-
 part 'api_university_model.g.dart';
 
 @freezed
@@ -11,7 +10,7 @@ class ApiUniversityModel with _$ApiUniversityModel {
   const ApiUniversityModel._();
 
   factory ApiUniversityModel({
-    @JsonKey(name: "alpha_twi_code") String? alphaCode,
+    @JsonKey(name: "alpha_two_code") String? alphaCode,
     @JsonKey(name: "country") String? country,
     @JsonKey(name: "state-province") String? state,
     @JsonKey(name: "name") String? name,

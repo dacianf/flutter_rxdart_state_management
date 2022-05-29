@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:rxdart_state_management_article/utils/extensions/map_extensions.dart';
 
 part 'api_error.g.dart';
 
@@ -41,8 +42,8 @@ class ApiError extends Error {
           runtimeType == other.runtimeType &&
           statusCode == other.statusCode &&
           message == other.message &&
-          errors == other.errors;
+          (errors?.hasSameElementsAs(other.errors) ?? errors == other.errors);
 
   @override
-  int get hashCode => statusCode.hashCode ^ message.hashCode ^ errors.hashCode;
+  int get hashCode => statusCode.hashCode ^ message.hashCode;
 }

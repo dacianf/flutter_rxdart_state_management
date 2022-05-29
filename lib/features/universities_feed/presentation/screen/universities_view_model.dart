@@ -1,5 +1,5 @@
 import 'package:rxdart/rxdart.dart';
-import 'package:rxdart_state_management_article/features/universities_feed/domain/usecase/GetUniversitiesByCountryUseCase.dart';
+import 'package:rxdart_state_management_article/features/universities_feed/domain/usecase/get_universities_by_country_use_case.dart';
 import 'package:rxdart_state_management_article/features/universities_feed/presentation/models/university_screen_state.dart';
 import 'package:rxdart_state_management_article/network_config/app_result.dart';
 
