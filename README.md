@@ -2,8 +2,10 @@
 
 RxDart State Management
 
-Projects describes a Flutter application which uses open API: https://universities.hipolabs.com for
-fetching a list of universities and displaying them in them.
+Project describes a Flutter application which displays a list of universities which can be queried
+by the country they are based into. It fetch the data by connecting to open API:
+"https://universities.hipolabs.com" and uses a clean and testable architecture for processing the
+information received from the API and displaying it on the screen.
 
 Technologies used:
 

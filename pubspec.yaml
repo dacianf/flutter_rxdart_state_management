@@ -29,7 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  rxdart: ^0.27.3
+  rxdart: ^0.27.4
   riverpod: ^2.0.0-dev.7
   retrofit: '>=3.0.0 <4.0.0'
   logger: any
@@ -40,7 +40,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.5
 
 
 dev_dependencies:
