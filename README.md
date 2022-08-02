@@ -1,18 +1,23 @@
-# rxdart_state_management_article
+# RxDart State Management Using MVVM With Clean Architecture and Unit Testing
 
-RxDart State Management
+This project is a Flutter application that fetches and displays a list of universities with the help of an external API. The project also lets us filter the list by country. To make all this magic happen, we used clean and testable architecture to provide an easy-to-maintain and scalable code.
 
-Project describes a Flutter application which displays a list of universities which can be queried
-by the country they are based into. It fetch the data by connecting to open API:
-"https://universities.hipolabs.com" and uses a clean and testable architecture for processing the
-information received from the API and displaying it on the screen.
+### Technologies Used:
 
-Technologies used:
-
-* MVVM + Clean Architecture pattern
+* MVVM and Clean Architecture pattern
 * RxDart for state management
-* Retrofit with Dio for Networking Layer
-* Freezed and JsonSerializable for generating models' boilerplate
+* Retrofit with Dio for the Network layer
+* Freezed and JsonSerializable for generating the models' boilerplates
+* Mockito for data mocking
+
+### API Used:
+* [universities.hipolabs.com](http://universities.hipolabs.com/search)
+
+### Related Reading by Dacian Florea:
+<b>You can find me on [LinkedIn](https://www.linkedin.com/in/dacian-florea/) and [Toptal](https://www.toptal.com/resume/dacian-florea).</b>
+
+* Clean architecture facilitates unit testing, which we demonstrate in the corresponding blog article at the Toptal Engineering Blog.
+* RxDart combined MVVM with clean architecture facilitates state management in Flutter, as demonstrated in https://hackernoon.com/flutter-state-management-with-rxdart-streams.
 
 ## Getting Started
 
