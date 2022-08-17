@@ -32,24 +32,24 @@ void main() {
     "alpha_two_code": "US",
     "domains": ["lindenwood.edu"],
     "country": "United States",
-    "state-province": null,
-    "web_pages": ["http://www.lindenwood.edu/"],
+    "state-province": "MJ",
+    "web_pages": null,
     "name": "Lindenwood University"
   };
   ApiUniversityModel expectedApiUniversityTwo = ApiUniversityModel(
     alphaCode: "US",
     country: "United States",
-    state: null,
+    state: "MJ",
     name: "Lindenwood University",
-    websites: ["http://www.lindenwood.edu/"],
+    websites: null,
     domains: ["lindenwood.edu"],
   );
   University expectedUniversityTwo = University(
     alphaCode: "US",
     country: "United States",
-    state: "",
+    state: "MJ",
     name: "Lindenwood University",
-    websites: ["http://www.lindenwood.edu/"],
+    websites: [],
     domains: ["lindenwood.edu"],
   );
 
