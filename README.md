@@ -16,7 +16,7 @@ This project is a Flutter application that fetches and displays a list of univer
 ### Related Reading by Dacian Florea:
 <b>You can find me on [LinkedIn](https://www.linkedin.com/in/dacian-florea/) and [Toptal](https://www.toptal.com/resume/dacian-florea).</b>
 
-* Clean architecture facilitates unit testing, which we demonstrate in the corresponding blog article at the Toptal Engineering Blog https://www.toptal.com/flutter/unit-testing-flutter.
+* Clean architecture facilitates unit testing, which we demonstrate in the [Unit Testing in Flutter: From Workflow Essentials to Complex Scenarios](https://www.toptal.com/flutter/unit-testing-flutter) article published in the Toptal Engineering Blog.
 * RxDart combined MVVM with clean architecture facilitates state management in Flutter, as demonstrated in https://hackernoon.com/flutter-state-management-with-rxdart-streams.
 
 ## Getting Started
